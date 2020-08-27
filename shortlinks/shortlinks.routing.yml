@@ -1,0 +1,15 @@
+shortlinks.shortlinkRedirect:
+  path: '/r/{short_code}'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\ShortlinksRedirectController::redirectToShortUrl'
+    short_code: 'short_code'
+  requirements:
+    _permission: 'access content'
+    
+shortlinks.shortlinkInfo:
+  path: '/view/{short_code}'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\ShortlinksInfoController::getInfo'
+    short_code: 'short_code'
+  requirements:
+    _permission: 'access content'

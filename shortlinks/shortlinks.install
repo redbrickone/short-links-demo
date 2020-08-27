@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ *   (Un)installs the Shorten module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function shortlinks_schema() {
+  $schema = [];
+  $schema['short_urls'] = [
+      'description' => t('Short URLs stored in the Database.'),
+      'fields' => [
+        'id' => [
+            'type' => 'serial',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+        ],
+        'long_url' => [
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+        ],
+        'short_url' => [
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+        ],
+        'short_code' => [
+            'type' => 'char',
+            'length' => 9,
+            'not null' => TRUE,
+        ],
+      ],
+      'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
