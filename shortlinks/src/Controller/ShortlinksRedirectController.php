@@ -8,7 +8,14 @@ use Drupal\Core\Url;
 use Drupal\Core\Routing\TrustedRedirectResponse;
 
 
+/**
+ * ShortlinksRedirectController handles the short_code => URL logic.
+ */
 class ShortlinksRedirectController extends ControllerBase {
+    
+    /**
+     * Retrieves the URL from the short_code.
+     */
     public function redirectToShortUrl($short_code) {
 
         $url_query = \Drupal::database()->select('short_urls', 's')

@@ -1,5 +1,6 @@
 <?php
 
+// Hit TinyURL and retrieve a short url
 function get_shortlink($url) {
     $tiny = 'http://tinyurl.com/api-create.php?url=';
     return file_get_contents($tiny.urlencode(trim($url)));

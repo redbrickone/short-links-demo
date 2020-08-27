@@ -7,8 +7,14 @@ namespace Drupal\shortlinks\Controller;
 use Drupal\Core\Url;
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ * ShortlinksInfoController that gets and renders data from the original URL.
+ */
 class ShortlinksInfoController extends ControllerBase {
 
+    /**
+     * Gets the Short and Long URLs to display on the page.
+     */
     public function getInfo($short_code) {
 
         $query = \Drupal::database()->select('short_urls', 's')

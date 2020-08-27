@@ -14,6 +14,7 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 class ShortlinksBlock extends BlockBase {
+    
     /**
      * {@inheritdoc}
      */

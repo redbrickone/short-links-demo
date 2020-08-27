@@ -7,6 +7,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * ShortenShortlinksForm handles the shortening of links.
+ */
 class ShortenShortlinksForm extends FormBase {
 
     /**
